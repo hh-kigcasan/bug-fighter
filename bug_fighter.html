@@ -27,7 +27,7 @@
 					$(this).parent().siblings(".picked").attr("src", $(this).attr("data-animated-img")); //display new character in action
 				}, function() {
 					var user = $(this).parent().parent().attr("id"); 									 //get section's id (user1 or user2)
-					$(`#${user} > .picked`).attr("src", $(`#${user}_default`).value());
+					$("#"+user+" > .picked").attr("src", "#"+user+"_default").value());
 				}
 			);
 
@@ -41,7 +41,7 @@
 			$("button").click(function(){
 				var character1 = $("#user1_name").value();
 				var character2 = $("#user2_name").value();
-				alert(`Battle begins with ${character1} and ${character2}!`);
+				alert("Battle begins with "+character1+" and "+character2+"!");
 			});
 	</script>
 </head>
